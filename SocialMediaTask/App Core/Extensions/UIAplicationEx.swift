@@ -1,12 +1,3 @@
-//
-//  UIAplications+Extensions.swift
-//  Rakeb user
-//
-//  Created by prog_zidane on 5/10/20.
-//  Copyright © 2020 Alamat. All rights reserved.
-//
-
-
 import UIKit
 
 extension UIApplication

@@ -74,28 +74,5 @@ import UIKit
     {
         super.drawText(in: rect.inset(by: insets))
     }
-    
-    @IBInspectable var localizedText: String {
-        set {
-            self.text = newValue
-            self.adjustForLang()
-        }
-        get {
-            return self.text ?? ""
-        }
-    }
-    
-    open func adjustForLang(){
-        if !LocalizationManager.isArabicLang()
-        {
-            textAlignment = NSTextAlignment.left
-            semanticContentAttribute = UISemanticContentAttribute.forceLeftToRight
-        }
-        else
-        {
-            textAlignment = NSTextAlignment.right
-            semanticContentAttribute = UISemanticContentAttribute.forceRightToLeft
-        }
-    }
 }
 

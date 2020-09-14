@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,26 +15,15 @@
 		CE2FAB37250F7F2600617621 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2FAB36250F7F2600617621 /* Assets.xcassets */; };
 		CE2FAB3A250F7F2600617621 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2FAB38250F7F2600617621 /* LaunchScreen.storyboard */; };
 		CE2FAB45250F7F2700617621 /* SocialMediaTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB44250F7F2700617621 /* SocialMediaTaskTests.swift */; };
-		CE2FAB88250F80B400617621 /* UIColor+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB5F250F80B300617621 /* UIColor+init.swift */; };
-		CE2FAB89250F80B400617621 /* UIAplications+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB60250F80B300617621 /* UIAplications+Extensions.swift */; };
-		CE2FAB8A250F80B400617621 /* TableView+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB61250F80B300617621 /* TableView+ex.swift */; };
-		CE2FAB8B250F80B400617621 /* UICollectionView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB62250F80B300617621 /* UICollectionView+Ex.swift */; };
-		CE2FAB8C250F80B400617621 /* ExUiImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB63250F80B300617621 /* ExUiImage.swift */; };
-		CE2FAB8D250F80B400617621 /* UIViewController+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB64250F80B300617621 /* UIViewController+Ex.swift */; };
+		CE2FAB89250F80B400617621 /* UIAplicationEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB60250F80B300617621 /* UIAplicationEx.swift */; };
+		CE2FAB8A250F80B400617621 /* TableViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB61250F80B300617621 /* TableViewEx.swift */; };
+		CE2FAB8D250F80B400617621 /* UIViewControllerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB64250F80B300617621 /* UIViewControllerEx.swift */; };
 		CE2FAB8E250F80B400617621 /* XIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB66250F80B300617621 /* XIB.swift */; };
 		CE2FAB8F250F80B400617621 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB67250F80B300617621 /* Storyboard.swift */; };
 		CE2FAB90250F80B400617621 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB68250F80B300617621 /* Animation.swift */; };
-		CE2FAB91250F80B400617621 /* UINavigationController+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB69250F80B300617621 /* UINavigationController+Ex.swift */; };
-		CE2FAB92250F80B400617621 /* CollectionView+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB6A250F80B300617621 /* CollectionView+ex.swift */; };
-		CE2FAB93250F80B400617621 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB6B250F80B300617621 /* IntExtension.swift */; };
-		CE2FAB94250F80B400617621 /* GoogleMapsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB6C250F80B300617621 /* GoogleMapsExtension.swift */; };
-		CE2FAB95250F80B400617621 /* EXString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB6D250F80B300617621 /* EXString.swift */; };
-		CE2FAB96250F80B400617621 /* UibuttonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB6E250F80B300617621 /* UibuttonLoader.swift */; };
-		CE2FAB97250F80B400617621 /* UIView+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB6F250F80B300617621 /* UIView+Gestures.swift */; };
-		CE2FAB98250F80B400617621 /* EncodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB70250F80B300617621 /* EncodableExtensions.swift */; };
+		CE2FAB98250F80B400617621 /* EncodableEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB70250F80B300617621 /* EncodableEx.swift */; };
 		CE2FAB99250F80B400617621 /* TextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB71250F80B300617621 /* TextFieldExtensions.swift */; };
-		CE2FAB9A250F80B400617621 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB72250F80B300617621 /* UIImageViewExtensions.swift */; };
-		CE2FAB9B250F80B400617621 /* UIView+constrains.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB73250F80B300617621 /* UIView+constrains.swift */; };
+		CE2FAB9A250F80B400617621 /* UIImageViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB72250F80B300617621 /* UIImageViewEx.swift */; };
 		CE2FAB9D250F80B400617621 /* NotifyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB76250F80B300617621 /* NotifyMessage.swift */; };
 		CE2FAB9E250F80B400617621 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB77250F80B300617621 /* Activity.swift */; };
 		CE2FAB9F250F80B400617621 /* iView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB79250F80B400617621 /* iView.swift */; };
@@ -44,8 +33,12 @@
 		CE2FABA3250F80B400617621 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB7D250F80B400617621 /* DesignableTextField.swift */; };
 		CE2FABA4250F80B400617621 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB7E250F80B400617621 /* DesignableButton.swift */; };
 		CE2FABA5250F80B400617621 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB7F250F80B400617621 /* DesignableView.swift */; };
-		CE2FABA8250F811A00617621 /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FABA7250F811A00617621 /* ValidationManager.swift */; };
 		CE2FABAA250F813E00617621 /* LibrariesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FABA9250F813E00617621 /* LibrariesManager.swift */; };
+		CE42B9BE250FCBE500BCE516 /* FirebaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B9BC250FCBE400BCE516 /* FirebaseAPI.swift */; };
+		CE42B9BF250FCBE500BCE516 /* FirebaseNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B9BD250FCBE500BCE516 /* FirebaseNetworkManager.swift */; };
+		CE42B9C1250FCC7100BCE516 /* FirebaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B9C0250FCC7100BCE516 /* FirebaseModels.swift */; };
+		CE42B9C5250FCCB200BCE516 /* FirebaseNetworkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B9C4250FCCB200BCE516 /* FirebaseNetworkable.swift */; };
+		CE42B9C8250FDCD100BCE516 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B9C7250FDCD100BCE516 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,26 +66,15 @@
 		CE2FAB40250F7F2700617621 /* SocialMediaTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialMediaTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2FAB44250F7F2700617621 /* SocialMediaTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaTaskTests.swift; sourceTree = "<group>"; };
 		CE2FAB46250F7F2700617621 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE2FAB5F250F80B300617621 /* UIColor+init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+init.swift"; sourceTree = "<group>"; };
-		CE2FAB60250F80B300617621 /* UIAplications+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAplications+Extensions.swift"; sourceTree = "<group>"; };
-		CE2FAB61250F80B300617621 /* TableView+ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableView+ex.swift"; sourceTree = "<group>"; };
-		CE2FAB62250F80B300617621 /* UICollectionView+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ex.swift"; sourceTree = "<group>"; };
-		CE2FAB63250F80B300617621 /* ExUiImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExUiImage.swift; sourceTree = "<group>"; };
-		CE2FAB64250F80B300617621 /* UIViewController+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ex.swift"; sourceTree = "<group>"; };
+		CE2FAB60250F80B300617621 /* UIAplicationEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAplicationEx.swift; sourceTree = "<group>"; };
+		CE2FAB61250F80B300617621 /* TableViewEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewEx.swift; sourceTree = "<group>"; };
+		CE2FAB64250F80B300617621 /* UIViewControllerEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerEx.swift; sourceTree = "<group>"; };
 		CE2FAB66250F80B300617621 /* XIB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XIB.swift; sourceTree = "<group>"; };
 		CE2FAB67250F80B300617621 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		CE2FAB68250F80B300617621 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
-		CE2FAB69250F80B300617621 /* UINavigationController+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ex.swift"; sourceTree = "<group>"; };
-		CE2FAB6A250F80B300617621 /* CollectionView+ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionView+ex.swift"; sourceTree = "<group>"; };
-		CE2FAB6B250F80B300617621 /* IntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
-		CE2FAB6C250F80B300617621 /* GoogleMapsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapsExtension.swift; sourceTree = "<group>"; };
-		CE2FAB6D250F80B300617621 /* EXString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EXString.swift; sourceTree = "<group>"; };
-		CE2FAB6E250F80B300617621 /* UibuttonLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UibuttonLoader.swift; sourceTree = "<group>"; };
-		CE2FAB6F250F80B300617621 /* UIView+Gestures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Gestures.swift"; sourceTree = "<group>"; };
-		CE2FAB70250F80B300617621 /* EncodableExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncodableExtensions.swift; sourceTree = "<group>"; };
+		CE2FAB70250F80B300617621 /* EncodableEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncodableEx.swift; sourceTree = "<group>"; };
 		CE2FAB71250F80B300617621 /* TextFieldExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldExtensions.swift; sourceTree = "<group>"; };
-		CE2FAB72250F80B300617621 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
-		CE2FAB73250F80B300617621 /* UIView+constrains.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+constrains.swift"; sourceTree = "<group>"; };
+		CE2FAB72250F80B300617621 /* UIImageViewEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewEx.swift; sourceTree = "<group>"; };
 		CE2FAB76250F80B300617621 /* NotifyMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyMessage.swift; sourceTree = "<group>"; };
 		CE2FAB77250F80B300617621 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		CE2FAB79250F80B400617621 /* iView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iView.swift; sourceTree = "<group>"; };
@@ -102,8 +84,12 @@
 		CE2FAB7D250F80B400617621 /* DesignableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		CE2FAB7E250F80B400617621 /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
 		CE2FAB7F250F80B400617621 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
-		CE2FABA7250F811A00617621 /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
 		CE2FABA9250F813E00617621 /* LibrariesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrariesManager.swift; sourceTree = "<group>"; };
+		CE42B9BC250FCBE400BCE516 /* FirebaseAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAPI.swift; sourceTree = "<group>"; };
+		CE42B9BD250FCBE500BCE516 /* FirebaseNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseNetworkManager.swift; sourceTree = "<group>"; };
+		CE42B9C0250FCC7100BCE516 /* FirebaseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModels.swift; sourceTree = "<group>"; };
+		CE42B9C4250FCCB200BCE516 /* FirebaseNetworkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNetworkable.swift; sourceTree = "<group>"; };
+		CE42B9C7250FDCD100BCE516 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		DAFA7E21036093C5692E649B /* Pods-SocialMediaTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaTaskTests.release.xcconfig"; path = "Target Support Files/Pods-SocialMediaTaskTests/Pods-SocialMediaTaskTests.release.xcconfig"; sourceTree = "<group>"; };
 		F22B4140384F6FF19F811626 /* Pods-SocialMediaTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-SocialMediaTaskTests/Pods-SocialMediaTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,7 +122,6 @@
 				F22B4140384F6FF19F811626 /* Pods-SocialMediaTaskTests.debug.xcconfig */,
 				DAFA7E21036093C5692E649B /* Pods-SocialMediaTaskTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -167,6 +152,7 @@
 				CE2FAB4F250F7F5400617621 /* App Core */,
 				CE2FAB51250F7F7D00617621 /* Screens */,
 				CE2FAB52250F7F9F00617621 /* Modules */,
+				CE42B9B9250FCB1600BCE516 /* Service */,
 			);
 			path = SocialMediaTask;
 			sourceTree = "<group>";
@@ -229,7 +215,6 @@
 		CE2FAB55250F80B300617621 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				CE2FABA7250F811A00617621 /* ValidationManager.swift */,
 				CE2FABA9250F813E00617621 /* LibrariesManager.swift */,
 			);
 			path = Managers;
@@ -238,25 +223,14 @@
 		CE2FAB5E250F80B300617621 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CE2FAB5F250F80B300617621 /* UIColor+init.swift */,
-				CE2FAB60250F80B300617621 /* UIAplications+Extensions.swift */,
-				CE2FAB61250F80B300617621 /* TableView+ex.swift */,
-				CE2FAB62250F80B300617621 /* UICollectionView+Ex.swift */,
-				CE2FAB63250F80B300617621 /* ExUiImage.swift */,
-				CE2FAB64250F80B300617621 /* UIViewController+Ex.swift */,
 				CE2FAB65250F80B300617621 /* XIB and StoryBoard */,
+				CE2FAB60250F80B300617621 /* UIAplicationEx.swift */,
+				CE2FAB61250F80B300617621 /* TableViewEx.swift */,
+				CE2FAB64250F80B300617621 /* UIViewControllerEx.swift */,
 				CE2FAB68250F80B300617621 /* Animation.swift */,
-				CE2FAB69250F80B300617621 /* UINavigationController+Ex.swift */,
-				CE2FAB6A250F80B300617621 /* CollectionView+ex.swift */,
-				CE2FAB6B250F80B300617621 /* IntExtension.swift */,
-				CE2FAB6C250F80B300617621 /* GoogleMapsExtension.swift */,
-				CE2FAB6D250F80B300617621 /* EXString.swift */,
-				CE2FAB6E250F80B300617621 /* UibuttonLoader.swift */,
-				CE2FAB6F250F80B300617621 /* UIView+Gestures.swift */,
-				CE2FAB70250F80B300617621 /* EncodableExtensions.swift */,
+				CE2FAB70250F80B300617621 /* EncodableEx.swift */,
 				CE2FAB71250F80B300617621 /* TextFieldExtensions.swift */,
-				CE2FAB72250F80B300617621 /* UIImageViewExtensions.swift */,
-				CE2FAB73250F80B300617621 /* UIView+constrains.swift */,
+				CE2FAB72250F80B300617621 /* UIImageViewEx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -299,6 +273,58 @@
 				CE2FAB78250F80B400617621 /* Designable Elements */,
 			);
 			path = "Custom UI Components";
+			sourceTree = "<group>";
+		};
+		CE42B9B9250FCB1600BCE516 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CE42B9BA250FCB3400BCE516 /* Remote */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CE42B9BA250FCB3400BCE516 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				CE42B9C6250FDCC100BCE516 /* Base */,
+				CE42B9BB250FCBE400BCE516 /* Firebase */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		CE42B9BB250FCBE400BCE516 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				CE42B9C3250FCC8000BCE516 /* Model */,
+				CE42B9C2250FCC7900BCE516 /* Core */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		CE42B9C2250FCC7900BCE516 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CE42B9BC250FCBE400BCE516 /* FirebaseAPI.swift */,
+				CE42B9BD250FCBE500BCE516 /* FirebaseNetworkManager.swift */,
+				CE42B9C4250FCCB200BCE516 /* FirebaseNetworkable.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CE42B9C3250FCC8000BCE516 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE42B9C0250FCC7100BCE516 /* FirebaseModels.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE42B9C6250FDCC100BCE516 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CE42B9C7250FDCD100BCE516 /* NetworkError.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		EA09985E401717097927FF06 /* Frameworks */ = {
@@ -479,38 +505,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE2FABA1250F80B400617621 /* iButton.swift in Sources */,
-				CE2FAB98250F80B400617621 /* EncodableExtensions.swift in Sources */,
-				CE2FAB92250F80B400617621 /* CollectionView+ex.swift in Sources */,
-				CE2FAB89250F80B400617621 /* UIAplications+Extensions.swift in Sources */,
-				CE2FAB8A250F80B400617621 /* TableView+ex.swift in Sources */,
+				CE2FAB98250F80B400617621 /* EncodableEx.swift in Sources */,
+				CE2FAB89250F80B400617621 /* UIAplicationEx.swift in Sources */,
+				CE2FAB8A250F80B400617621 /* TableViewEx.swift in Sources */,
 				CE2FAB99250F80B400617621 /* TextFieldExtensions.swift in Sources */,
 				CE2FABA0250F80B400617621 /* DesignableImageView.swift in Sources */,
+				CE42B9C8250FDCD100BCE516 /* NetworkError.swift in Sources */,
 				CE2FABA5250F80B400617621 /* DesignableView.swift in Sources */,
-				CE2FAB97250F80B400617621 /* UIView+Gestures.swift in Sources */,
-				CE2FAB93250F80B400617621 /* IntExtension.swift in Sources */,
 				CE2FAB9E250F80B400617621 /* Activity.swift in Sources */,
+				CE42B9BE250FCBE500BCE516 /* FirebaseAPI.swift in Sources */,
+				CE42B9C1250FCC7100BCE516 /* FirebaseModels.swift in Sources */,
 				CE2FABAA250F813E00617621 /* LibrariesManager.swift in Sources */,
 				CE2FABA2250F80B400617621 /* DesignableLabel.swift in Sources */,
-				CE2FAB8B250F80B400617621 /* UICollectionView+Ex.swift in Sources */,
 				CE2FAB9D250F80B400617621 /* NotifyMessage.swift in Sources */,
 				CE2FAB32250F7F2200617621 /* ViewController.swift in Sources */,
-				CE2FAB96250F80B400617621 /* UibuttonLoader.swift in Sources */,
 				CE2FAB8E250F80B400617621 /* XIB.swift in Sources */,
-				CE2FAB8D250F80B400617621 /* UIViewController+Ex.swift in Sources */,
-				CE2FABA8250F811A00617621 /* ValidationManager.swift in Sources */,
+				CE2FAB8D250F80B400617621 /* UIViewControllerEx.swift in Sources */,
 				CE2FABA4250F80B400617621 /* DesignableButton.swift in Sources */,
-				CE2FAB95250F80B400617621 /* EXString.swift in Sources */,
-				CE2FAB94250F80B400617621 /* GoogleMapsExtension.swift in Sources */,
-				CE2FAB88250F80B400617621 /* UIColor+init.swift in Sources */,
 				CE2FABA3250F80B400617621 /* DesignableTextField.swift in Sources */,
 				CE2FAB2E250F7F2200617621 /* AppDelegate.swift in Sources */,
+				CE42B9BF250FCBE500BCE516 /* FirebaseNetworkManager.swift in Sources */,
 				CE2FAB90250F80B400617621 /* Animation.swift in Sources */,
-				CE2FAB8C250F80B400617621 /* ExUiImage.swift in Sources */,
-				CE2FAB9A250F80B400617621 /* UIImageViewExtensions.swift in Sources */,
+				CE2FAB9A250F80B400617621 /* UIImageViewEx.swift in Sources */,
 				CE2FAB9F250F80B400617621 /* iView.swift in Sources */,
-				CE2FAB91250F80B400617621 /* UINavigationController+Ex.swift in Sources */,
-				CE2FAB9B250F80B400617621 /* UIView+constrains.swift in Sources */,
 				CE2FAB8F250F80B400617621 /* Storyboard.swift in Sources */,
+				CE42B9C5250FCCB200BCE516 /* FirebaseNetworkable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,7 +621,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -656,7 +675,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -673,7 +692,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UA3HP7LWZZ;
-				INFOPLIST_FILE = SocialMediaTask/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SocialMediaTask/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -693,7 +712,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UA3HP7LWZZ;
-				INFOPLIST_FILE = SocialMediaTask/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SocialMediaTask/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

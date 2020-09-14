@@ -19,6 +19,9 @@ target 'SocialMediaTask' do
   pod 'NVActivityIndicatorView'
   pod 'IQKeyboardManagerSwift'
   pod 'Toast-Swift'
+  
+  # Add animation functionalities to UIView through Extensions
+  pod 'Motion'
 
   target 'SocialMediaTaskTests' do
     inherit! :search_paths

@@ -4,16 +4,7 @@ extension UIStoryboard
 {
     enum StoryboardType: String
     {
-        case authentication
-        case home
         case main
-        case createTrip
-        case wallet
-        case pinOnMap
-        case savedPlaces
-        case sideMenu
-        case validatePromoCode
-        case currentRides
         
         var fileName: String
         {

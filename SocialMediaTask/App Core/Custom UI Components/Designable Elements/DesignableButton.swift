@@ -130,26 +130,4 @@ import UIKit
             self.layer.insertSublayer(gradientLayer, at: 0)
         }
     }
-    
-    @IBInspectable var LocalizedTitle: String {
-        set {
-            self.setTitle(newValue.localized, for: .normal)
-        }
-        get {
-            return self.titleLabel?.text ?? ""
-        }
-    }
-    
-    func adjustForLang(){
-        if !LocalizationManager.isArabicLang()
-        {
-            titleLabel?.textAlignment = NSTextAlignment.left
-            semanticContentAttribute = UISemanticContentAttribute.forceLeftToRight
-        }
-        else
-        {
-            titleLabel?.textAlignment = NSTextAlignment.right
-            semanticContentAttribute = UISemanticContentAttribute.forceRightToLeft
-        }
-    }
 }

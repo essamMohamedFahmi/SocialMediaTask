@@ -1,12 +1,3 @@
-//
-//  TableViewCell.swift
-//  Rakeb user
-//
-//  Created by prog_zidane on 5/10/20.
-//  Copyright © 2020 Alamat. All rights reserved.
-//
-
-
 import UIKit
 
 protocol IdentifiableCell: class {
@@ -51,23 +42,23 @@ extension UITableView
     }
     
     ///Get visible cell height
-    var visibleCellsHeight: CGFloat {
+    var visibleCellsHeight: CGFloat
+    {
         self.setNeedsLayout()
         self.layoutIfNeeded()
         return visibleCells.reduce(0) { $0 + $1.frame.height }
     }
-    
     
     /// Check if cell at the specific section and row is visible
     /// - Parameters:
     /// - section: an Int reprenseting a UITableView section
     /// - row: and Int representing a UITableView row
     /// - Returns: True if cell at section and row is visible, False otherwise
-    func isCellVisible(section:Int, row: Int) -> Bool {
+    func isCellVisible(section:Int, row: Int) -> Bool
+    {
         guard let indexes = self.indexPathsForVisibleRows else {
             return false
         }
         return indexes.contains {$0.section == section && $0.row == row }
     }
-    
 }

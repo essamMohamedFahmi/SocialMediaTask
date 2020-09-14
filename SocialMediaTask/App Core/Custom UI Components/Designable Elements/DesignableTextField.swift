@@ -134,72 +134,17 @@ import UIKit
         rightView = view
     }
     
-    
     // MARK: - Corner Radius
+   
     @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet {
             self.layer.cornerRadius = cornerRadius
-        }
-    }
-    
-    @IBInspectable var localizedPlaceholder: String {
-        set {
-            self.adjustForLang()
-            self.placeholder = newValue
-        }
-        get {
-            return self.placeholder ?? ""
-        }
-    }
-    
-    @IBInspectable var localizedText: String {
-        set {
-            self.text = newValue
-            self.adjustForLang()
-        }
-        get {
-            return self.text ?? ""
-        }
-    }
-    
-    @IBInspectable var setCountryCode: String {
-        set {
-            addCountryCode(code: newValue)
-        }
-        get {
-            return ""
         }
     }
 }
 
 extension DesignableTextField
 {
-    func addCountryCode(code: String)
-    {
-        self.placeholder = "5XX XXXX"
-        let codeLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: self.frame.height))
-        codeLabel.text = code
-        codeLabel.textAlignment = .center
-        codeLabel.font = UIFont.cairo(.regular(17))
-        codeLabel.textColor = UIColor.lightGray
-        self.leftView = codeLabel
-        self.leftViewMode = .always
-    }
-    
-    func adjustForLang()
-    {
-        if !LocalizationManager.isArabicLang()
-        {
-            textAlignment = NSTextAlignment.left
-            semanticContentAttribute = UISemanticContentAttribute.forceLeftToRight
-        }
-        else
-        {
-            textAlignment = NSTextAlignment.right
-            semanticContentAttribute = UISemanticContentAttribute.forceRightToLeft
-        }
-    }
-    
     func setBottomLine(color: UIColor?)
     {
         let bottomLine = CALayer()

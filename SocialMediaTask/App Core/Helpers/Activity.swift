@@ -1,11 +1,3 @@
-//
-//  Indicator.swift
-//  Rakeb user
-//
-//  Created by prog_zidane on 5/10/20.
-//  Copyright © 2020 Alamat. All rights reserved.
-//
-
 import NVActivityIndicatorView
 
 public protocol ActivitayActionsDelegate: class
@@ -45,7 +37,7 @@ final class Activity: NSObject, ActivitayActionsDelegate
                                                              width: 50,
                                                              height: 50),
                                                type: .ballClipRotatePulse,
-                                               color: Colors.activityColor.color,
+                                               color: UIColor.blue,
                                                padding: 0.0)
         
         activity.center = loaderView.center

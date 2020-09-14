@@ -1,15 +1,7 @@
-//
-//  Animation.swift
-//  Rakeb User
-//
-//  Created by Mohamed Shemy on 15 Jul 2020.
-//  Copyright © 2020 Alamat. All rights reserved.
-//
-
-import UIKit
 import Motion
 
 // MARK:- UIView
+
 extension UIView
 {
     // MARK:- Fade -
@@ -97,6 +89,7 @@ extension UIView
 }
 
 // MARK:- UITableViewCell
+
 extension UITableViewCell
 {
     override func springWithFade(delay: Double = 0.0, stiffness: CGFloat = 0, damping: CGFloat = 15.0, duration: Double = 2.0)

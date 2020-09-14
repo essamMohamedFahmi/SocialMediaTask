@@ -1,11 +1,3 @@
-//
-//  EncodableExtensions.swift
-//  Rakeb user
-//
-//  Created by Hmaserv on 7/13/20.
-//  Copyright © 2020 Alamat. All rights reserved.
-//
-
 import Foundation
 
 extension Encodable

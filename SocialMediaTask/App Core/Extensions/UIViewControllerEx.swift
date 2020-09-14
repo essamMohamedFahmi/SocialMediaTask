@@ -1,13 +1,3 @@
-//
-//  UIViewController+Ex.swift
-//  Rakeb user
-//
-//  Created by prog_zidane on 5/10/20.
-//  Copyright © 2020 Alamat. All rights reserved.
-//
-
-import Foundation
-import UIKit
 import NVActivityIndicatorView
 
 extension UIViewController
@@ -18,14 +8,14 @@ extension UIViewController
         let alert = UIAlertController(title: title,
                                       message: message,
                                       preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Okay".localized, style: .default, handler: { (alertAction) in
+        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (alertAction) in
             if let okayHandler = okayHandler {
                 okayHandler()
             }
         }))
         
         if (addCancelAction){
-            alert.addAction(UIAlertAction(title: "Cancel".localized, style: .cancel, handler: { alert in
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { alert in
                 if let okayHandler = cancelHandler {
                     okayHandler()
                 }
