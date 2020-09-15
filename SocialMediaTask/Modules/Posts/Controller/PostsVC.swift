@@ -56,7 +56,7 @@ class PostsVC: UIViewController
         viewModel.error.drive(onNext: { [weak self] (_) in
             if self?.viewModel.hasError ?? false
             {
-                NotifiyMessage.shared.toast(toastMessage: "Please try Again")
+                NotifiyMessage.shared.toast(toastMessage: "Please try again")
             }
         }).disposed(by: disposeBag)
     }
@@ -67,9 +67,7 @@ class PostsVC: UIViewController
         tableView.delegate = delegate
         
         tableView.register(cell: PostTableViewCell.self)
-
-        // removing extra cells
-        tableView.tableFooterView = UIView()
+        tableView.removeEmptyCells()
     }
     
     private func refreshDataSource(with posts: [Post])
@@ -77,6 +75,13 @@ class PostsVC: UIViewController
         dataSource = PostsTableDataSource(posts) as UITableViewDataSource
         tableView.dataSource = dataSource
         tableView.reloadData()
+    }
+    
+    // MARK: Actions
+    
+    @IBAction func addPostButtonTapped(_ sender: Any)
+    {
+        //
     }
 }
 

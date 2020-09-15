@@ -50,6 +50,7 @@ extension LoginVC
     {
         let postsVC = PostsVC.instantiate(storyboard: .main)
         let navController = UINavigationController(rootViewController: postsVC)
+        navController.modalPresentationStyle = .fullScreen
         present(navController, animated: true, completion: nil)
     }
 }

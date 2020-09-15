@@ -232,10 +232,10 @@
 		CE2FAB53250F7FB000617621 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				CE41A31B2511174000BB329F /* View Model */,
+				CE41A31A2511173400BB329F /* Controller */,
 				CE42B9E12510509700BCE516 /* Model */,
 				CE42B9CA25101BF400BCE516 /* Post Cell View */,
-				CE2FAB31250F7F2200617621 /* PostsVC.swift */,
-				CE42B9DF25104CD800BCE516 /* PostsViewModel.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -303,6 +303,22 @@
 				CE2FAB78250F80B400617621 /* Designable Elements */,
 			);
 			path = "Custom UI Components";
+			sourceTree = "<group>";
+		};
+		CE41A31A2511173400BB329F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE2FAB31250F7F2200617621 /* PostsVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE41A31B2511174000BB329F /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE42B9DF25104CD800BCE516 /* PostsViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 		CE42B9B9250FCB1600BCE516 /* Service */ = {

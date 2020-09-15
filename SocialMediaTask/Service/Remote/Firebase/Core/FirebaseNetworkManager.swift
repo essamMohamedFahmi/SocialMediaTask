@@ -36,7 +36,8 @@ class FirebaseNetworkManager: FirebaseNetworkable
     
     convenience init()
     {
-        let networkActivityClosure: NetworkActivityPlugin.NetworkActivityClosure = { (activity, _) in
+        let networkActivityClosure: NetworkActivityPlugin.NetworkActivityClosure =
+        { (activity, _) in
             switch activity
             {
             case .began:

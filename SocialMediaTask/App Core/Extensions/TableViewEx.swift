@@ -61,4 +61,9 @@ extension UITableView
         }
         return indexes.contains {$0.section == section && $0.row == row }
     }
+    
+    func removeEmptyCells()
+    {
+        self.tableFooterView = UIView()
+    }
 }
