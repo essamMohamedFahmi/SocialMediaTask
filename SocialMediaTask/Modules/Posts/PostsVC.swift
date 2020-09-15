@@ -6,15 +6,77 @@
 //  Copyright © 2020 Essam Mohamed Fahmi. All rights reserved.
 //
 
-import UIKit
+import RxSwift
 
-class PostsVC: UIViewController {
+class PostsVC: UIViewController
+{
+    // MARK: Outlets
+    
+    @IBOutlet weak var tableView: UITableView!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    // MARK: Properties
+    
+    private var viewModel: PostsViewModel!
+    private let disposeBag = DisposeBag()
+
+    private var dataSource: UITableViewDataSource!
+    private var delegate: UITableViewDelegate!
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle
+    {
+        return .lightContent
     }
+    
+    // MARK: View Controller Life Cycle
+    
+    override func viewDidAppear(_ animated: Bool)
+    {
+        super.viewDidAppear(animated)
+        viewModel.fetchPosts()
+    }
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+       
+        initViewModel()
+        initPostsTableView()
+    }
+    
+    // MARK: Methods
+    
+    private func initViewModel()
+    {
+        viewModel = PostsViewModel()
+        
+        viewModel.posts.drive(onNext: { [weak self] (posts) in
+            self?.refreshDataSource(with: posts)
+        }).disposed(by: disposeBag)
+        
+        viewModel.error.drive(onNext: { [weak self] (_) in
+            if self?.viewModel.hasError ?? false
+            {
+                NotifiyMessage.shared.toast(toastMessage: "Please try Again")
+            }
+        }).disposed(by: disposeBag)
+    }
+    
+    private func initPostsTableView()
+    {
+        delegate = PostsTableDelegate(parentViewController: self) as UITableViewDelegate
+        tableView.delegate = delegate
+        
+        tableView.register(cell: PostTableViewCell.self)
 
-
+        // removing extra cells
+        tableView.tableFooterView = UIView()
+    }
+    
+    private func refreshDataSource(with posts: [Post])
+    {
+        dataSource = PostsTableDataSource(posts) as UITableViewDataSource
+        tableView.dataSource = dataSource
+        tableView.reloadData()
+    }
 }
 

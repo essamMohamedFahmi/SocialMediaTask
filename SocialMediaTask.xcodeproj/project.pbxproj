@@ -47,6 +47,9 @@
 		CE42B9DA251036DA00BCE516 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B9D9251036DA00BCE516 /* LoginViewModel.swift */; };
 		CE42B9DC251039D800BCE516 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE42B9DB251039D700BCE516 /* GoogleService-Info.plist */; };
 		CE42B9DE2510431200BCE516 /* FirebaseUserSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B9DD2510431200BCE516 /* FirebaseUserSessionManager.swift */; };
+		CE42B9E025104CD800BCE516 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B9DF25104CD800BCE516 /* PostsViewModel.swift */; };
+		CE42B9E32510517300BCE516 /* PostsTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B9E22510517300BCE516 /* PostsTableDelegate.swift */; };
+		CE42B9E52510518100BCE516 /* PostsTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B9E42510518100BCE516 /* PostsTableDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +109,9 @@
 		CE42B9D9251036DA00BCE516 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CE42B9DB251039D700BCE516 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE42B9DD2510431200BCE516 /* FirebaseUserSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserSessionManager.swift; sourceTree = "<group>"; };
+		CE42B9DF25104CD800BCE516 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
+		CE42B9E22510517300BCE516 /* PostsTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableDelegate.swift; sourceTree = "<group>"; };
+		CE42B9E42510518100BCE516 /* PostsTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableDataSource.swift; sourceTree = "<group>"; };
 		DAFA7E21036093C5692E649B /* Pods-SocialMediaTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaTaskTests.release.xcconfig"; path = "Target Support Files/Pods-SocialMediaTaskTests/Pods-SocialMediaTaskTests.release.xcconfig"; sourceTree = "<group>"; };
 		F22B4140384F6FF19F811626 /* Pods-SocialMediaTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-SocialMediaTaskTests/Pods-SocialMediaTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -226,8 +232,10 @@
 		CE2FAB53250F7FB000617621 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
-				CE42B9CA25101BF400BCE516 /* View */,
+				CE42B9E12510509700BCE516 /* Model */,
+				CE42B9CA25101BF400BCE516 /* Post Cell View */,
 				CE2FAB31250F7F2200617621 /* PostsVC.swift */,
+				CE42B9DF25104CD800BCE516 /* PostsViewModel.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -349,13 +357,13 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		CE42B9CA25101BF400BCE516 /* View */ = {
+		CE42B9CA25101BF400BCE516 /* Post Cell View */ = {
 			isa = PBXGroup;
 			children = (
 				CE42B9CD25101C5100BCE516 /* PostTableViewCell.swift */,
 				CE42B9CE25101C5100BCE516 /* PostTableViewCell.xib */,
 			);
-			path = View;
+			path = "Post Cell View";
 			sourceTree = "<group>";
 		};
 		CE42B9D42510345900BCE516 /* Login */ = {
@@ -365,6 +373,15 @@
 				CE42B9D9251036DA00BCE516 /* LoginViewModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		CE42B9E12510509700BCE516 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE42B9E22510517300BCE516 /* PostsTableDelegate.swift */,
+				CE42B9E42510518100BCE516 /* PostsTableDataSource.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		EA09985E401717097927FF06 /* Frameworks */ = {
@@ -551,12 +568,14 @@
 				CE2FAB98250F80B400617621 /* EncodableEx.swift in Sources */,
 				CE42B9D62510346800BCE516 /* LoginVC.swift in Sources */,
 				CE2FAB89250F80B400617621 /* UIAplicationEx.swift in Sources */,
+				CE42B9E52510518100BCE516 /* PostsTableDataSource.swift in Sources */,
 				CE2FAB8A250F80B400617621 /* TableViewEx.swift in Sources */,
 				CE2FAB99250F80B400617621 /* TextFieldExtensions.swift in Sources */,
 				CE2FABA0250F80B400617621 /* DesignableImageView.swift in Sources */,
 				CE42B9C8250FDCD100BCE516 /* NetworkError.swift in Sources */,
 				CE42B9DA251036DA00BCE516 /* LoginViewModel.swift in Sources */,
 				CE2FABA5250F80B400617621 /* DesignableView.swift in Sources */,
+				CE42B9E32510517300BCE516 /* PostsTableDelegate.swift in Sources */,
 				CE2FAB9E250F80B400617621 /* Activity.swift in Sources */,
 				CE42B9BE250FCBE500BCE516 /* FirebaseAPI.swift in Sources */,
 				CE42B9C1250FCC7100BCE516 /* FirebaseModels.swift in Sources */,
@@ -567,6 +586,7 @@
 				CE2FAB32250F7F2200617621 /* PostsVC.swift in Sources */,
 				CE2FAB8E250F80B400617621 /* XIB.swift in Sources */,
 				CE2FAB8D250F80B400617621 /* UIViewControllerEx.swift in Sources */,
+				CE42B9E025104CD800BCE516 /* PostsViewModel.swift in Sources */,
 				CE2FABA4250F80B400617621 /* DesignableButton.swift in Sources */,
 				CE2FABA3250F80B400617621 /* DesignableTextField.swift in Sources */,
 				CE2FAB2E250F7F2200617621 /* AppDelegate.swift in Sources */,
