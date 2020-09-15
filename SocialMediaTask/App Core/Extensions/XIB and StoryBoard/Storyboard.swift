@@ -5,6 +5,7 @@ extension UIStoryboard
     enum StoryboardType: String
     {
         case main
+        case login
         
         var fileName: String
         {

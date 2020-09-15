@@ -15,6 +15,9 @@ target 'SocialMediaTask' do
   pod 'RxSwift'
   pod 'RxCocoa'
 
+  # Firebase
+  pod 'Firebase/Auth'
+
   # Helper
   pod 'NVActivityIndicatorView'
   pod 'IQKeyboardManagerSwift'

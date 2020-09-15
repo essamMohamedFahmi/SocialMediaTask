@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PostsVC.swift
 //  SocialMediaTask
 //
 //  Created by Essam Mohamed Fahmi on 9/14/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PostsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

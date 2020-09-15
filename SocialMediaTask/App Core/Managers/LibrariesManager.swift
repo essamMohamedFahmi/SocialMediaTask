@@ -6,6 +6,7 @@
 //  Copyright © 2020 Essam Mohamed Fahmi. All rights reserved.
 //
 
+import FirebaseCore
 import IQKeyboardManagerSwift
 
 class LibrariesManager
@@ -16,6 +17,8 @@ class LibrariesManager
                               launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil)
     {
         NotifiyMessage.shared.configNotify()
+        
+        enableFirebaseServices()
         enableKeyboardManager()
     }
     
@@ -24,5 +27,10 @@ class LibrariesManager
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+    }
+    
+    private static func enableFirebaseServices()
+    {
+        FirebaseApp.configure()
     }
 }

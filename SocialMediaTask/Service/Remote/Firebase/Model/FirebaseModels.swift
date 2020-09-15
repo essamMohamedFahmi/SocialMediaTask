@@ -15,6 +15,7 @@ enum PostInfoKey
     static let description = "description"
     static let imageURL = "imageURL"
     static let likesCount = "likesCount"
+    static let usersLikedPost = "usersLikedPost"
 }
 
 struct Post: Codable
@@ -24,6 +25,7 @@ struct Post: Codable
     var description: String?
     var imageURL: String?
     var likesCount: Int?
+    var usersLikedPost: [String]?
 
     enum CodingKeys: String, CodingKey
     {
@@ -44,20 +46,24 @@ struct Post: Codable
         guard let title = postInfo[PostInfoKey.title] as? String,
             let description = postInfo[PostInfoKey.description] as? String,
             let imageURL = postInfo[PostInfoKey.imageURL] as? String,
-            let likesCount = postInfo[PostInfoKey.likesCount] as? Int else { return nil }
+            let likesCount = postInfo[PostInfoKey.likesCount] as? Int,
+            let usersLikedPost = postInfo[PostInfoKey.usersLikedPost] as? [String] else { return nil }
         
         self.ID = postInfo[PostInfoKey.ID] as? String ?? ""
         self.title = title
         self.description = description
         self.imageURL = imageURL
         self.likesCount = likesCount
+        self.usersLikedPost = usersLikedPost
     }
     
     init(title: String, description: String)
     {
         self.title = title
         self.description = description
+        self.imageURL = ""
         self.likesCount = 0
+        self.usersLikedPost = []
     }
 }
 

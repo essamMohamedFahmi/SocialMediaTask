@@ -11,12 +11,12 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
-    //var appCoordinator: AppCoordinator? = AppCoordinator()
+    let appFlowManager = AppFlowManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
     {
         LibrariesManager.initLibraries(for: application, launchOptions: launchOptions)
-        //appCoordinator?.start()
+        appFlowManager.start()
         return true
     }
 }

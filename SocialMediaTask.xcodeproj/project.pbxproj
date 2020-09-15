@@ -10,7 +10,7 @@
 		0EF99DC48E9A000F83C815EA /* Pods_SocialMediaTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEEE07E55E90AA55292D8B50 /* Pods_SocialMediaTask.framework */; };
 		443B29D4081883C70CC3CB9F /* Pods_SocialMediaTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACE08AB28E32E9F2BB8084E /* Pods_SocialMediaTaskTests.framework */; };
 		CE2FAB2E250F7F2200617621 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB2D250F7F2200617621 /* AppDelegate.swift */; };
-		CE2FAB32250F7F2200617621 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB31250F7F2200617621 /* ViewController.swift */; };
+		CE2FAB32250F7F2200617621 /* PostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FAB31250F7F2200617621 /* PostsVC.swift */; };
 		CE2FAB35250F7F2200617621 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2FAB33250F7F2200617621 /* Main.storyboard */; };
 		CE2FAB37250F7F2600617621 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2FAB36250F7F2600617621 /* Assets.xcassets */; };
 		CE2FAB3A250F7F2600617621 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2FAB38250F7F2600617621 /* LaunchScreen.storyboard */; };
@@ -39,6 +39,14 @@
 		CE42B9C1250FCC7100BCE516 /* FirebaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B9C0250FCC7100BCE516 /* FirebaseModels.swift */; };
 		CE42B9C5250FCCB200BCE516 /* FirebaseNetworkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B9C4250FCCB200BCE516 /* FirebaseNetworkable.swift */; };
 		CE42B9C8250FDCD100BCE516 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B9C7250FDCD100BCE516 /* NetworkError.swift */; };
+		CE42B9CF25101C5100BCE516 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B9CD25101C5100BCE516 /* PostTableViewCell.swift */; };
+		CE42B9D025101C5100BCE516 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE42B9CE25101C5100BCE516 /* PostTableViewCell.xib */; };
+		CE42B9D3251033DA00BCE516 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE42B9D1251033DA00BCE516 /* Login.storyboard */; };
+		CE42B9D62510346800BCE516 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B9D52510346800BCE516 /* LoginVC.swift */; };
+		CE42B9D8251034C100BCE516 /* AppFlowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B9D7251034C100BCE516 /* AppFlowManager.swift */; };
+		CE42B9DA251036DA00BCE516 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B9D9251036DA00BCE516 /* LoginViewModel.swift */; };
+		CE42B9DC251039D800BCE516 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE42B9DB251039D700BCE516 /* GoogleService-Info.plist */; };
+		CE42B9DE2510431200BCE516 /* FirebaseUserSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B9DD2510431200BCE516 /* FirebaseUserSessionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +66,7 @@
 		C50BE49F3CD0051EAEA6612D /* Pods-SocialMediaTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaTask.release.xcconfig"; path = "Target Support Files/Pods-SocialMediaTask/Pods-SocialMediaTask.release.xcconfig"; sourceTree = "<group>"; };
 		CE2FAB2A250F7F2200617621 /* SocialMediaTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMediaTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2FAB2D250F7F2200617621 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE2FAB31250F7F2200617621 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE2FAB31250F7F2200617621 /* PostsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsVC.swift; sourceTree = "<group>"; };
 		CE2FAB34250F7F2200617621 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE2FAB36250F7F2600617621 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE2FAB39250F7F2600617621 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -90,6 +98,14 @@
 		CE42B9C0250FCC7100BCE516 /* FirebaseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModels.swift; sourceTree = "<group>"; };
 		CE42B9C4250FCCB200BCE516 /* FirebaseNetworkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNetworkable.swift; sourceTree = "<group>"; };
 		CE42B9C7250FDCD100BCE516 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		CE42B9CD25101C5100BCE516 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		CE42B9CE25101C5100BCE516 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		CE42B9D2251033DA00BCE516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		CE42B9D52510346800BCE516 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		CE42B9D7251034C100BCE516 /* AppFlowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowManager.swift; sourceTree = "<group>"; };
+		CE42B9D9251036DA00BCE516 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		CE42B9DB251039D700BCE516 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE42B9DD2510431200BCE516 /* FirebaseUserSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserSessionManager.swift; sourceTree = "<group>"; };
 		DAFA7E21036093C5692E649B /* Pods-SocialMediaTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaTaskTests.release.xcconfig"; path = "Target Support Files/Pods-SocialMediaTaskTests/Pods-SocialMediaTaskTests.release.xcconfig"; sourceTree = "<group>"; };
 		F22B4140384F6FF19F811626 /* Pods-SocialMediaTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-SocialMediaTaskTests/Pods-SocialMediaTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,6 +196,7 @@
 		CE2FAB50250F7F5E00617621 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE42B9DB251039D700BCE516 /* GoogleService-Info.plist */,
 				CE2FAB2D250F7F2200617621 /* AppDelegate.swift */,
 				CE2FAB36250F7F2600617621 /* Assets.xcassets */,
 				CE2FAB3B250F7F2600617621 /* Info.plist */,
@@ -192,6 +209,7 @@
 			children = (
 				CE2FAB33250F7F2200617621 /* Main.storyboard */,
 				CE2FAB38250F7F2600617621 /* LaunchScreen.storyboard */,
+				CE42B9D1251033DA00BCE516 /* Login.storyboard */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -199,6 +217,7 @@
 		CE2FAB52250F7F9F00617621 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CE42B9D42510345900BCE516 /* Login */,
 				CE2FAB53250F7FB000617621 /* Posts */,
 			);
 			path = Modules;
@@ -207,7 +226,8 @@
 		CE2FAB53250F7FB000617621 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
-				CE2FAB31250F7F2200617621 /* ViewController.swift */,
+				CE42B9CA25101BF400BCE516 /* View */,
+				CE2FAB31250F7F2200617621 /* PostsVC.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -216,6 +236,8 @@
 			isa = PBXGroup;
 			children = (
 				CE2FABA9250F813E00617621 /* LibrariesManager.swift */,
+				CE42B9D7251034C100BCE516 /* AppFlowManager.swift */,
+				CE42B9DD2510431200BCE516 /* FirebaseUserSessionManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -327,6 +349,24 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		CE42B9CA25101BF400BCE516 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE42B9CD25101C5100BCE516 /* PostTableViewCell.swift */,
+				CE42B9CE25101C5100BCE516 /* PostTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE42B9D42510345900BCE516 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CE42B9D52510346800BCE516 /* LoginVC.swift */,
+				CE42B9D9251036DA00BCE516 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		EA09985E401717097927FF06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,6 +463,9 @@
 				CE2FAB3A250F7F2600617621 /* LaunchScreen.storyboard in Resources */,
 				CE2FAB37250F7F2600617621 /* Assets.xcassets in Resources */,
 				CE2FAB35250F7F2200617621 /* Main.storyboard in Resources */,
+				CE42B9D3251033DA00BCE516 /* Login.storyboard in Resources */,
+				CE42B9D025101C5100BCE516 /* PostTableViewCell.xib in Resources */,
+				CE42B9DC251039D800BCE516 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,19 +549,22 @@
 			files = (
 				CE2FABA1250F80B400617621 /* iButton.swift in Sources */,
 				CE2FAB98250F80B400617621 /* EncodableEx.swift in Sources */,
+				CE42B9D62510346800BCE516 /* LoginVC.swift in Sources */,
 				CE2FAB89250F80B400617621 /* UIAplicationEx.swift in Sources */,
 				CE2FAB8A250F80B400617621 /* TableViewEx.swift in Sources */,
 				CE2FAB99250F80B400617621 /* TextFieldExtensions.swift in Sources */,
 				CE2FABA0250F80B400617621 /* DesignableImageView.swift in Sources */,
 				CE42B9C8250FDCD100BCE516 /* NetworkError.swift in Sources */,
+				CE42B9DA251036DA00BCE516 /* LoginViewModel.swift in Sources */,
 				CE2FABA5250F80B400617621 /* DesignableView.swift in Sources */,
 				CE2FAB9E250F80B400617621 /* Activity.swift in Sources */,
 				CE42B9BE250FCBE500BCE516 /* FirebaseAPI.swift in Sources */,
 				CE42B9C1250FCC7100BCE516 /* FirebaseModels.swift in Sources */,
 				CE2FABAA250F813E00617621 /* LibrariesManager.swift in Sources */,
 				CE2FABA2250F80B400617621 /* DesignableLabel.swift in Sources */,
+				CE42B9D8251034C100BCE516 /* AppFlowManager.swift in Sources */,
 				CE2FAB9D250F80B400617621 /* NotifyMessage.swift in Sources */,
-				CE2FAB32250F7F2200617621 /* ViewController.swift in Sources */,
+				CE2FAB32250F7F2200617621 /* PostsVC.swift in Sources */,
 				CE2FAB8E250F80B400617621 /* XIB.swift in Sources */,
 				CE2FAB8D250F80B400617621 /* UIViewControllerEx.swift in Sources */,
 				CE2FABA4250F80B400617621 /* DesignableButton.swift in Sources */,
@@ -527,9 +573,11 @@
 				CE42B9BF250FCBE500BCE516 /* FirebaseNetworkManager.swift in Sources */,
 				CE2FAB90250F80B400617621 /* Animation.swift in Sources */,
 				CE2FAB9A250F80B400617621 /* UIImageViewEx.swift in Sources */,
+				CE42B9DE2510431200BCE516 /* FirebaseUserSessionManager.swift in Sources */,
 				CE2FAB9F250F80B400617621 /* iView.swift in Sources */,
 				CE2FAB8F250F80B400617621 /* Storyboard.swift in Sources */,
 				CE42B9C5250FCCB200BCE516 /* FirebaseNetworkable.swift in Sources */,
+				CE42B9CF25101C5100BCE516 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +614,14 @@
 				CE2FAB39250F7F2600617621 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CE42B9D1251033DA00BCE516 /* Login.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE42B9D2251033DA00BCE516 /* Base */,
+			);
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

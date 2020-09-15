@@ -1,4 +1,4 @@
-import UIKit
+import Kingfisher
 
 extension UIImageView
 {
@@ -25,12 +25,22 @@ extension UIImageView
     }
 }
 
+// MARK: Kingfisher
+
 extension UIImageView
 {
     convenience init(assetName: String, scale: UIView.ContentMode = .scaleAspectFit)
     {
         self.init(image: UIImage(named: assetName))
         contentMode = scale
+    }
+    
+    func uploadImage(from imageURL: String?)
+    {
+        guard let imageURL = imageURL, let url = URL(string: imageURL) else { return }
+        
+        let image = UIImage(named: "default_post_icon")
+        self.kf.setImage(with: url, placeholder: image)
     }
 }
 
