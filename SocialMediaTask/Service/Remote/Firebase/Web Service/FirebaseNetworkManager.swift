@@ -47,7 +47,7 @@ class FirebaseNetworkManager: FirebaseNetworkable
             }
         }
             
-        var plugins : [PluginType] = []
+        var plugins: [PluginType] = []
 
         let networkActivityPlugin = NetworkActivityPlugin(networkActivityClosure: networkActivityClosure)
         plugins.append(networkActivityPlugin)
@@ -89,6 +89,21 @@ class FirebaseNetworkManager: FirebaseNetworkable
     func uploadPost(_ post: Post, completion: @escaping (Bool) -> Void)
     {
         provider.request(.uploadPost(post)) { result in
+            
+            if case .success = result
+            {
+                completion(true)
+            }
+            else
+            {
+                completion(false)
+            }
+        }
+    }
+    
+    func updatePost(_ post: Post, completion: @escaping (Bool) -> Void)
+    {
+        provider.request(.updatePost(post)) { result in
             
             if case .success = result
             {

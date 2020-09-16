@@ -36,6 +36,15 @@ struct PostsViewModel: FirebaseNetworkManagerInjected
         return _posts.value.count
     }
     
+    private var firebaseObserverManager: FirebaseObserverManager!
+    
+    // MARK: Init
+    
+    init()
+    {
+        firebaseObserverManager = FirebaseObserverManager(delegate: self)
+    }
+    
     // MARK: Methods
     
     func getPost(at index: Int) -> Post?
@@ -75,6 +84,18 @@ struct PostsViewModel: FirebaseNetworkManagerInjected
         }
     }
     
+    func updatePost(_ post: Post)
+    {
+        self._error.accept(nil)
+        
+        firebaseNetworkManager.updatePost(post, completion: { (postUpdated) in
+            if !postUpdated
+            {
+                self._error.accept("Please try again!")
+            }
+        })
+    }
+    
     private func getPosts(from postsDic: [String: Post]) -> [Post]?
     {
         var postsList: [Post] = []
@@ -87,5 +108,18 @@ struct PostsViewModel: FirebaseNetworkManagerInjected
         
         guard postsList.count > 0 else { return nil }
         return postsList
+    }
+}
+
+extension PostsViewModel: FirebaseObserverDelegate
+{
+    func postChanged(_ post: Post)
+    {
+        if let index = _posts.value.firstIndex(where: { $0.ID == post.ID })
+        {
+            var postsUpdate = _posts.value
+            postsUpdate[index] = post
+            _posts.accept(postsUpdate)
+        }
     }
 }

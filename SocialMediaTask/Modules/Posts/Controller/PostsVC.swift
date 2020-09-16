@@ -39,8 +39,8 @@ class PostsVC: UIViewController
     {
         super.viewDidLoad()
        
-        initViewModel()
         initPostsTableView()
+        initViewModel()
     }
     
     // MARK: Methods
@@ -56,7 +56,7 @@ class PostsVC: UIViewController
         viewModel.error.drive(onNext: { [weak self] (_) in
             if self?.viewModel.hasError ?? false
             {
-                NotifiyMessage.shared.toast(toastMessage: "Please try again")
+                NotifiyMessage.shared.toast(toastMessage: "Please try again!")
             }
         }).disposed(by: disposeBag)
     }
@@ -66,13 +66,19 @@ class PostsVC: UIViewController
         delegate = PostsTableDelegate(parentViewController: self) as UITableViewDelegate
         tableView.delegate = delegate
         
+        dataSource = PostsTableDataSource(delegate: self) as UITableViewDataSource
+        tableView.dataSource = dataSource
+        
         tableView.register(cell: PostTableViewCell.self)
         tableView.removeEmptyCells()
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 320
     }
     
     private func refreshDataSource(with posts: [Post])
     {
-        dataSource = PostsTableDataSource(posts) as UITableViewDataSource
+        (dataSource as! PostsTableDataSource).setPosts(from: posts)
         tableView.dataSource = dataSource
         tableView.reloadData()
     }
@@ -82,6 +88,14 @@ class PostsVC: UIViewController
     @IBAction func addPostButtonTapped(_ sender: Any)
     {
         //
+    }
+}
+
+extension PostsVC: PostsTableDataSourceDelegate
+{
+    func updatePost(_ post: Post)
+    {
+        viewModel.updatePost(post)
     }
 }
 

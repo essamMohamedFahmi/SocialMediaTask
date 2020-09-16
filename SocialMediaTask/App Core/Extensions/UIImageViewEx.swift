@@ -39,7 +39,7 @@ extension UIImageView
     {
         guard let imageURL = imageURL, let url = URL(string: imageURL) else { return }
         
-        let image = UIImage(named: "default_post_icon")
+        let image = #imageLiteral(resourceName: "004-picture")
         self.kf.setImage(with: url, placeholder: image)
     }
 }

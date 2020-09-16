@@ -12,6 +12,7 @@ enum FirebaseAPI
 {
     case posts
     case uploadPost(_ post: Post)
+    case updatePost(_ post: Post)
 }
 
 extension FirebaseAPI: TargetType
@@ -27,6 +28,8 @@ extension FirebaseAPI: TargetType
         {
         case .posts, .uploadPost:
             return "/posts.json"
+        case .updatePost(let post):
+            return "/posts/\(post.ID).json"
         }
     }
     
@@ -38,6 +41,8 @@ extension FirebaseAPI: TargetType
             return .get
         case .uploadPost:
             return .post
+        case .updatePost:
+            return .put
         }
     }
     
@@ -60,13 +65,28 @@ extension FirebaseAPI: TargetType
         switch self
         {
         case .posts:
-            var parameters: [String: Any] = [:]
-            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
+            return .requestParameters(parameters: [:], encoding: URLEncoding.default)
             
         case .uploadPost(let post):
-            var parameters: [String: Any] = [:]
-            parameters["text"] = "done"
+            let parameters = getParameters(from: post)
+            return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
+            
+        case .updatePost(let post):
+            let parameters = getParameters(from: post)
             return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
         }
+    }
+}
+
+extension FirebaseAPI
+{
+    func getParameters(from post: Post) -> [String: Any]
+    {
+        var parameters: [String: Any] = [:]
+        parameters[PostInfoKey.title] = post.title
+        parameters[PostInfoKey.description] = post.description
+        parameters[PostInfoKey.imageURL] = post.imageURL
+        parameters[PostInfoKey.usersLikedPost] = post.usersLikedPost
+        return parameters
     }
 }

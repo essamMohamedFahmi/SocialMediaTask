@@ -16,6 +16,7 @@ target 'SocialMediaTask' do
   pod 'RxCocoa'
 
   # Firebase
+  pod 'Firebase/Database'
   pod 'Firebase/Auth'
 
   # Helper

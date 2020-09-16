@@ -8,18 +8,31 @@
 
 import UIKit
 
+protocol PostsTableDataSourceDelegate: class
+{
+    func updatePost(_ post: Post)
+}
+
 public class PostsTableDataSource: NSObject, UITableViewDataSource
 {
     // MARK: Properties
     
     private var posts: [Post] = []
+    weak var delegate: PostsTableDataSourceDelegate?
     
     // MARK: Class Methods
     
-    init(_ posts: [Post])
+    init(delegate: PostsTableDataSourceDelegate)
+    {
+        self.delegate = delegate
+        super.init()
+    }
+    
+    // MARK: Methods
+    
+    func setPosts(from posts: [Post])
     {
         self.posts = posts
-        super.init()
     }
 
     // MARK: Data Source Methods
@@ -29,16 +42,21 @@ public class PostsTableDataSource: NSObject, UITableViewDataSource
         return posts.count
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-    {
-        return 320
-    }
-    
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeue() as PostTableViewCell
         let post = posts[indexPath.row]
+        cell.delegate = self
         cell.configure(post)
         return cell
+    }
+}
+
+
+extension PostsTableDataSource: PostTableViewCellDelegate
+{
+    func updatePost(_ post: Post)
+    {
+        delegate?.updatePost(post)
     }
 }

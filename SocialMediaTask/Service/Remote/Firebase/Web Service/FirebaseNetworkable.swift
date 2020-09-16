@@ -17,4 +17,7 @@ protocol FirebaseNetworkable: class
     
     func uploadPost(_ post: Post,
                     completion: @escaping (Bool) -> Void)
+    
+    func updatePost(_ post: Post,
+                    completion: @escaping (Bool) -> Void)
 }

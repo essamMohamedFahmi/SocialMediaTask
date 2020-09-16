@@ -50,6 +50,8 @@
 		CE42B9E025104CD800BCE516 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B9DF25104CD800BCE516 /* PostsViewModel.swift */; };
 		CE42B9E32510517300BCE516 /* PostsTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B9E22510517300BCE516 /* PostsTableDelegate.swift */; };
 		CE42B9E52510518100BCE516 /* PostsTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42B9E42510518100BCE516 /* PostsTableDataSource.swift */; };
+		CEAB53E52511822A005B59F9 /* FirebaseObserverManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB53E42511822A005B59F9 /* FirebaseObserverManager.swift */; };
+		CEAB53E925118379005B59F9 /* FirebaseRealtimeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB53E825118379005B59F9 /* FirebaseRealtimeProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,8 @@
 		CE42B9DF25104CD800BCE516 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		CE42B9E22510517300BCE516 /* PostsTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableDelegate.swift; sourceTree = "<group>"; };
 		CE42B9E42510518100BCE516 /* PostsTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableDataSource.swift; sourceTree = "<group>"; };
+		CEAB53E42511822A005B59F9 /* FirebaseObserverManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseObserverManager.swift; sourceTree = "<group>"; };
+		CEAB53E825118379005B59F9 /* FirebaseRealtimeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRealtimeProtocols.swift; sourceTree = "<group>"; };
 		DAFA7E21036093C5692E649B /* Pods-SocialMediaTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaTaskTests.release.xcconfig"; path = "Target Support Files/Pods-SocialMediaTaskTests/Pods-SocialMediaTaskTests.release.xcconfig"; sourceTree = "<group>"; };
 		F22B4140384F6FF19F811626 /* Pods-SocialMediaTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-SocialMediaTaskTests/Pods-SocialMediaTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -223,6 +227,7 @@
 		CE2FAB52250F7F9F00617621 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CEAB53E125117AF7005B59F9 /* Add Post */,
 				CE42B9D42510345900BCE516 /* Login */,
 				CE2FAB53250F7FB000617621 /* Posts */,
 			);
@@ -342,19 +347,20 @@
 			isa = PBXGroup;
 			children = (
 				CE42B9C3250FCC8000BCE516 /* Model */,
-				CE42B9C2250FCC7900BCE516 /* Core */,
+				CEAB53E62511831F005B59F9 /* Realtime Database */,
+				CE42B9C2250FCC7900BCE516 /* Web Service */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
 		};
-		CE42B9C2250FCC7900BCE516 /* Core */ = {
+		CE42B9C2250FCC7900BCE516 /* Web Service */ = {
 			isa = PBXGroup;
 			children = (
 				CE42B9BC250FCBE400BCE516 /* FirebaseAPI.swift */,
 				CE42B9BD250FCBE500BCE516 /* FirebaseNetworkManager.swift */,
 				CE42B9C4250FCCB200BCE516 /* FirebaseNetworkable.swift */,
 			);
-			path = Core;
+			path = "Web Service";
 			sourceTree = "<group>";
 		};
 		CE42B9C3250FCC8000BCE516 /* Model */ = {
@@ -398,6 +404,38 @@
 				CE42B9E42510518100BCE516 /* PostsTableDataSource.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CEAB53E125117AF7005B59F9 /* Add Post */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB53E325117B0D005B59F9 /* View Model */,
+				CEAB53E225117B06005B59F9 /* Controller */,
+			);
+			path = "Add Post";
+			sourceTree = "<group>";
+		};
+		CEAB53E225117B06005B59F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEAB53E325117B0D005B59F9 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		CEAB53E62511831F005B59F9 /* Realtime Database */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB53E42511822A005B59F9 /* FirebaseObserverManager.swift */,
+				CEAB53E825118379005B59F9 /* FirebaseRealtimeProtocols.swift */,
+			);
+			path = "Realtime Database";
 			sourceTree = "<group>";
 		};
 		EA09985E401717097927FF06 /* Frameworks */ = {
@@ -584,6 +622,7 @@
 				CE2FAB98250F80B400617621 /* EncodableEx.swift in Sources */,
 				CE42B9D62510346800BCE516 /* LoginVC.swift in Sources */,
 				CE2FAB89250F80B400617621 /* UIAplicationEx.swift in Sources */,
+				CEAB53E52511822A005B59F9 /* FirebaseObserverManager.swift in Sources */,
 				CE42B9E52510518100BCE516 /* PostsTableDataSource.swift in Sources */,
 				CE2FAB8A250F80B400617621 /* TableViewEx.swift in Sources */,
 				CE2FAB99250F80B400617621 /* TextFieldExtensions.swift in Sources */,
@@ -610,6 +649,7 @@
 				CE2FAB90250F80B400617621 /* Animation.swift in Sources */,
 				CE2FAB9A250F80B400617621 /* UIImageViewEx.swift in Sources */,
 				CE42B9DE2510431200BCE516 /* FirebaseUserSessionManager.swift in Sources */,
+				CEAB53E925118379005B59F9 /* FirebaseRealtimeProtocols.swift in Sources */,
 				CE2FAB9F250F80B400617621 /* iView.swift in Sources */,
 				CE2FAB8F250F80B400617621 /* Storyboard.swift in Sources */,
 				CE42B9C5250FCCB200BCE516 /* FirebaseNetworkable.swift in Sources */,

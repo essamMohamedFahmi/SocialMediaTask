@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol PostTableViewCellDelegate: class
+{
+    func updatePost(_ post: Post)
+}
+
 class PostTableViewCell: UITableViewCell
 {
     // MARK: Outlets
@@ -16,9 +21,23 @@ class PostTableViewCell: UITableViewCell
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblNumberOfLikes: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
-    
+    @IBOutlet weak var btnLike: UIButton!
+
     // MARK: Properties
 
+    weak var delegate: PostTableViewCellDelegate?
+    
+    private var userLikePost: Bool!
+    {
+        didSet
+        {
+            userLikePost ? btnLike.setTitle("Dislike", for: .normal)
+                : btnLike.setTitle("Like", for: .normal)
+        }
+    }
+    
+    private var post: Post!
+    
     // MARK: Class Methods
     
     override func awakeFromNib()
@@ -33,14 +52,34 @@ class PostTableViewCell: UITableViewCell
         imageViewPost.uploadImage(from: post.imageURL)
         lblTitle.text = post.title
         lblDescription.text = post.description
-        lblNumberOfLikes.text = "\(post.likesCount ?? 0) liked it!"
+        lblNumberOfLikes.text = "\(post.usersLikedPost.count) liked it!"
+        
+        setLikeStatus(post)
+        self.post = post
+    }
+    
+    private func setLikeStatus(_ post: Post)
+    {
+        guard let userID = FirebaseUserSessionManager.shared.userID else { return }
+        userLikePost = post.usersLikedPost[userID] ?? false
     }
     
     // MARK: Actions
     
-    @IBAction func likeTapped(sender: UIButton)
+    @IBAction func likeButtonTapped(_ sender: UIButton)
     {
+        guard let userID = FirebaseUserSessionManager.shared.userID else { return }
         
+        if userLikePost
+        {
+            post.usersLikedPost[userID] = nil
+        }
+        else
+        {
+            post.usersLikedPost[userID] = true
+        }
+        
+        delegate?.updatePost(post)
     }
 }
 
