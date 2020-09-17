@@ -1,3 +1,8 @@
+//
+//  Created by Essam Mohamed Fahmi.
+//  Copyright © 2020 Essam Mohamed Fahmi. All rights reserved.
+//
+
 import Toast_Swift
 
 final class NotifiyMessage

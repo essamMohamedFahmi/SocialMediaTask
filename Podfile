@@ -29,10 +29,9 @@ target 'SocialMediaTask' do
   
   # Add animation functionalities to UIView through Extensions
   pod 'Motion'
+end
 
-  target 'SocialMediaTaskTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
+# Pods used in Testing
+target 'SocialMediaTaskTests' do
+  pod 'Moya'
 end

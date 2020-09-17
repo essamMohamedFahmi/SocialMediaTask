@@ -8,6 +8,11 @@
 
 import FirebaseStorage
 
+struct StorageManagerInjectionMap
+{
+   static var storageManager = FirebaseStorageManager()
+}
+
 protocol StorageManagerInjected { }
 
 extension StorageManagerInjected
@@ -16,7 +21,7 @@ extension StorageManagerInjected
     {
         get
         {
-            return FirebaseStorageManager()
+            return StorageManagerInjectionMap.storageManager
         }
     }
 }

@@ -7,7 +7,20 @@
 		<key>SocialMediaTask.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>27</integer>
+			<integer>29</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>CE2FAB29250F7F2200617621</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CE2FAB3F250F7F2700617621</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

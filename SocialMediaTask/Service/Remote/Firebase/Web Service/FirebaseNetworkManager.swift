@@ -8,6 +8,11 @@
 
 import Moya
 
+struct FirebaseNetworkManagerInjectionMap
+{
+   static var firebaseNetworkManager = FirebaseNetworkManager()
+}
+
 protocol FirebaseNetworkManagerInjected { }
 
 extension FirebaseNetworkManagerInjected
@@ -16,7 +21,7 @@ extension FirebaseNetworkManagerInjected
     {
         get
         {
-            return FirebaseNetworkManager()
+            return FirebaseNetworkManagerInjectionMap.firebaseNetworkManager
         }
     }
 }
@@ -26,7 +31,6 @@ class FirebaseNetworkManager: FirebaseNetworkable
     // MARK: Properties
     
     private let provider: MoyaProvider<FirebaseAPI>
-    private var isUpdateRequest = false
     
     // MARK: Initiallization
     
@@ -61,11 +65,6 @@ class FirebaseNetworkManager: FirebaseNetworkable
     }
     
     // MARK: Private Methods
-    
-    private func startAnimation()
-    {
-        if !isUpdateRequest { Activity.startAnimating() }
-    }
     
     // MARK: Methods
     

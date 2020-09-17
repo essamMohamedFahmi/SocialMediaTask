@@ -50,6 +50,8 @@ extension FirebaseAPI: TargetType
     {
         switch self
         {
+        case .posts:
+            return FirebaseTestingManager.shared.getJSONData()
         default:
             return Data()
         }

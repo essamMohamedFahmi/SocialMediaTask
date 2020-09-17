@@ -82,10 +82,16 @@ class AddPostVC: UIViewController
                        initialSpringVelocity: 1,
                        options: [],
                        animations: { [weak self] in
-                        self?.imageViewPostImage.isHidden = !isVisible
-                        self?.btnRemoveImage.isHidden = !isVisible
-                        self?.stackViewPost.layoutIfNeeded()
+                        self?.userSelectedImage(isVisible)
             }, completion: nil)
+    }
+    
+    private func userSelectedImage(_ status: Bool)
+    {
+        imageViewPostImage.isHidden = !status
+        imageViewPostImage.backgroundColor = !status ? .clear : .black
+        btnRemoveImage.isHidden = !status
+        stackViewPost.layoutIfNeeded()
     }
     
     // MARK: Actions
