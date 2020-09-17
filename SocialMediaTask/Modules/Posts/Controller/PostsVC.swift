@@ -16,7 +16,7 @@ class PostsVC: UIViewController
 
     // MARK: Properties
     
-    private var viewModel: PostsViewModel!
+    var viewModel: PostsViewModel!
     private let disposeBag = DisposeBag()
 
     private var dataSource: UITableViewDataSource!
@@ -39,8 +39,11 @@ class PostsVC: UIViewController
     {
         super.viewDidLoad()
        
+        navigationItem.title = "News Feed"
+        
         initPostsTableView()
         initViewModel()
+        setupRefreshControl()
     }
     
     // MARK: Methods
@@ -51,6 +54,7 @@ class PostsVC: UIViewController
         
         viewModel.posts.drive(onNext: { [weak self] (posts) in
             self?.refreshDataSource(with: posts)
+            self?.stopPullAnimation()
         }).disposed(by: disposeBag)
         
         viewModel.error.drive(onNext: { [weak self] (_) in
@@ -71,9 +75,10 @@ class PostsVC: UIViewController
         
         tableView.register(cell: PostTableViewCell.self)
         tableView.removeEmptyCells()
+        tableView.contentInset.bottom = 80
         
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 320
+        tableView.estimatedRowHeight = 330
     }
     
     private func refreshDataSource(with posts: [Post])
@@ -87,15 +92,7 @@ class PostsVC: UIViewController
     
     @IBAction func addPostButtonTapped(_ sender: Any)
     {
-        //
+        let addPostVC = AddPostVC.instantiate(storyboard: .addPost)
+        navigationController?.pushViewController(addPostVC, animated: true)
     }
 }
-
-extension PostsVC: PostsTableDataSourceDelegate
-{
-    func updatePost(_ post: Post)
-    {
-        viewModel.updatePost(post)
-    }
-}
-

@@ -24,8 +24,16 @@ struct LoginViewModel
     
     func loginAnonymously()
     {
-        FirebaseUserSessionManager.shared.login { (status) in
-            self._loginProcessDone.accept(status)
+        FirebaseUserSessionManager().login { (result) in
+            
+            switch result
+            {
+            case .success(let userID):
+                UserSessionManager.shared.setUserLoggedIn(userID)
+                self._loginProcessDone.accept(true)
+            case .failure:
+                self._loginProcessDone.accept(false)
+            }
         }
     }
 }

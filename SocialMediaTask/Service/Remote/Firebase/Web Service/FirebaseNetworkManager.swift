@@ -26,6 +26,7 @@ class FirebaseNetworkManager: FirebaseNetworkable
     // MARK: Properties
     
     private let provider: MoyaProvider<FirebaseAPI>
+    private var isUpdateRequest = false
     
     // MARK: Initiallization
     
@@ -57,6 +58,13 @@ class FirebaseNetworkManager: FirebaseNetworkable
         
         let provider = MoyaProvider<FirebaseAPI>(plugins: plugins)
         self.init(provider: provider)
+    }
+    
+    // MARK: Private Methods
+    
+    private func startAnimation()
+    {
+        if !isUpdateRequest { Activity.startAnimating() }
     }
     
     // MARK: Methods
@@ -103,6 +111,9 @@ class FirebaseNetworkManager: FirebaseNetworkable
     
     func updatePost(_ post: Post, completion: @escaping (Bool) -> Void)
     {
+        // we do not want to animate while update post
+        Activity.stopWorking(true)
+        
         provider.request(.updatePost(post)) { result in
             
             if case .success = result
@@ -113,6 +124,8 @@ class FirebaseNetworkManager: FirebaseNetworkable
             {
                 completion(false)
             }
+            
+            Activity.stopWorking(false)
         }
     }
 }

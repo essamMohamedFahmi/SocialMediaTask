@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Post-->
+        <scene sceneID="xOa-sL-hry">
+            <objects>
+                <viewController storyboardIdentifier="AddPostVC" id="tSt-iR-BAC" userLabel="Add Post" customClass="AddPostVC" customModule="SocialMediaTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uoz-oV-nib">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="rgo-BR-BdS">
+                                <rect key="frame" x="20" y="69" width="374" height="306.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's it all about?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wSL-1J-tFK">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="37"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" translatesAutoresizingMaskIntoConstraints="NO" id="e41-OG-8RE" customClass="GrowingTextView" customModule="GrowingTextView">
+                                        <rect key="frame" x="0.0" y="52" width="374" height="39.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="What's in your mind?"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P6H-sc-uuH" customClass="DesignableImageView" customModule="SocialMediaTask" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="106.5" width="374" height="200"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="ajd-aP-7AW"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajM-Jr-G9r" userLabel="Add Photo" customClass="DesignableButton" customModule="SocialMediaTask" customModuleProvider="target">
+                                <rect key="frame" x="20" y="385.5" width="95" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="01W-5w-547"/>
+                                    <constraint firstAttribute="height" constant="25" id="bNC-7e-2DE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="Photo" image="gallery">
+                                    <color key="titleColor" red="0.18326008320000001" green="0.66874158380000004" blue="0.68626701830000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableImageRightAligned" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imageRightPadding">
+                                        <real key="value" value="70"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleLeftPadding">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleRightPadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="imageButtonTapped:" destination="tSt-iR-BAC" eventType="touchUpInside" id="p2C-00-x3d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwe-DT-39a">
+                                <rect key="frame" x="354" y="190.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="VGZ-BX-ahf"/>
+                                    <constraint firstAttribute="width" constant="25" id="Vag-WB-EST"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="removeImageButtonTapped:" destination="tSt-iR-BAC" eventType="touchUpInside" id="B5J-5V-aCd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGL-5t-2Zd" customClass="DesignableButton" customModule="SocialMediaTask" customModuleProvider="target">
+                                <rect key="frame" x="50" y="816" width="314" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="qtj-hN-XiQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sharePostButtonTapped:" destination="tSt-iR-BAC" eventType="touchUpInside" id="fHJ-qN-eCz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ajM-Jr-G9r" firstAttribute="top" secondItem="rgo-BR-BdS" secondAttribute="bottom" constant="10" id="BhA-CZ-ccW"/>
+                            <constraint firstItem="ajM-Jr-G9r" firstAttribute="leading" secondItem="rdR-qY-eVa" secondAttribute="leading" constant="20" id="Oib-TP-th4"/>
+                            <constraint firstItem="VGL-5t-2Zd" firstAttribute="leading" secondItem="rdR-qY-eVa" secondAttribute="leading" constant="50" id="Qce-xq-YTu"/>
+                            <constraint firstItem="rgo-BR-BdS" firstAttribute="leading" secondItem="rdR-qY-eVa" secondAttribute="leading" constant="20" id="ih6-Y5-6YD"/>
+                            <constraint firstItem="pwe-DT-39a" firstAttribute="top" secondItem="P6H-sc-uuH" secondAttribute="top" constant="15" id="oEU-i9-eww"/>
+                            <constraint firstItem="rdR-qY-eVa" firstAttribute="trailing" secondItem="VGL-5t-2Zd" secondAttribute="trailing" constant="50" id="pVF-Ip-tl5"/>
+                            <constraint firstItem="pwe-DT-39a" firstAttribute="trailing" secondItem="P6H-sc-uuH" secondAttribute="trailing" constant="-15" id="qqw-65-gvc"/>
+                            <constraint firstAttribute="bottom" secondItem="VGL-5t-2Zd" secondAttribute="bottom" constant="40" id="siB-fZ-8l1"/>
+                            <constraint firstItem="rgo-BR-BdS" firstAttribute="top" secondItem="rdR-qY-eVa" secondAttribute="top" constant="25" id="v45-iw-Z9j"/>
+                            <constraint firstItem="rdR-qY-eVa" firstAttribute="trailing" secondItem="rgo-BR-BdS" secondAttribute="trailing" constant="20" id="wNx-dm-P9r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rdR-qY-eVa"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnRemoveImage" destination="pwe-DT-39a" id="U5V-Lx-kLv"/>
+                        <outlet property="imageViewPostImage" destination="P6H-sc-uuH" id="LIe-et-zpv"/>
+                        <outlet property="stackViewPost" destination="rgo-BR-BdS" id="8pq-kU-idh"/>
+                        <outlet property="textViewDescription" destination="e41-OG-8RE" id="vxo-LA-py4"/>
+                        <outlet property="txtTitle" destination="wSL-1J-tFK" id="Di3-Zu-JNW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SEV-6a-aeO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968.11594202898561" y="27.455357142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="40" height="40"/>
+        <image name="gallery" width="48" height="48"/>
+    </resources>
+</document>

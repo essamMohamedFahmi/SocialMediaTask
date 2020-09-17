@@ -28,15 +28,9 @@ class PostTableViewCell: UITableViewCell
     weak var delegate: PostTableViewCellDelegate?
     
     private var userLikePost: Bool!
-    {
-        didSet
-        {
-            userLikePost ? btnLike.setTitle("Dislike", for: .normal)
-                : btnLike.setTitle("Like", for: .normal)
-        }
-    }
-    
     private var post: Post!
+    
+    let userID = UserSessionManager.shared.userID ?? ""
     
     // MARK: Class Methods
     
@@ -52,7 +46,6 @@ class PostTableViewCell: UITableViewCell
         imageViewPost.uploadImage(from: post.imageURL)
         lblTitle.text = post.title
         lblDescription.text = post.description
-        lblNumberOfLikes.text = "\(post.usersLikedPost.count) liked it!"
         
         setLikeStatus(post)
         self.post = post
@@ -60,16 +53,23 @@ class PostTableViewCell: UITableViewCell
     
     private func setLikeStatus(_ post: Post)
     {
-        guard let userID = FirebaseUserSessionManager.shared.userID else { return }
         userLikePost = post.usersLikedPost[userID] ?? false
+        if userLikePost
+        {
+            lblNumberOfLikes.text = "You and \(post.usersLikedPost.count - 1) liked!"
+            btnLike.setTitle("Dislike", for: .normal)
+        }
+        else
+        {
+            lblNumberOfLikes.text = "\(post.usersLikedPost.count) liked!"
+            btnLike.setTitle("Like", for: .normal)
+        }
     }
     
     // MARK: Actions
     
     @IBAction func likeButtonTapped(_ sender: UIButton)
     {
-        guard let userID = FirebaseUserSessionManager.shared.userID else { return }
-        
         if userLikePost
         {
             post.usersLikedPost[userID] = nil

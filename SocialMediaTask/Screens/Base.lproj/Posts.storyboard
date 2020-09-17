@@ -21,23 +21,39 @@
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMu-7u-I2c">
-                                <rect key="frame" x="324" y="816" width="40" height="40"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VRQ-Uv-NFD" customClass="DesignableView" customModule="SocialMediaTask" customModuleProvider="target">
+                                <rect key="frame" x="324" y="806" width="50" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMu-7u-I2c">
+                                        <rect key="frame" x="5" y="5" width="40" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="newPost"/>
+                                        <connections>
+                                            <action selector="addPostButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g7f-nP-y9R"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="JH4-Z3-FmG"/>
-                                    <constraint firstAttribute="width" constant="40" id="Vco-vh-6KK"/>
+                                    <constraint firstAttribute="width" constant="50" id="1Gq-7A-RH0"/>
+                                    <constraint firstAttribute="height" constant="50" id="7Zu-N3-pO2"/>
+                                    <constraint firstAttribute="bottom" secondItem="oMu-7u-I2c" secondAttribute="bottom" constant="5" id="NIt-lU-ab7"/>
+                                    <constraint firstItem="oMu-7u-I2c" firstAttribute="leading" secondItem="VRQ-Uv-NFD" secondAttribute="leading" constant="5" id="g5O-hn-Blv"/>
+                                    <constraint firstAttribute="trailing" secondItem="oMu-7u-I2c" secondAttribute="trailing" constant="5" id="rGl-Qp-5fN"/>
+                                    <constraint firstItem="oMu-7u-I2c" firstAttribute="top" secondItem="VRQ-Uv-NFD" secondAttribute="top" constant="5" id="yun-wZ-y7L"/>
                                 </constraints>
-                                <state key="normal" title="Add"/>
-                                <connections>
-                                    <action selector="addPostButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g7f-nP-y9R"/>
-                                </connections>
-                            </button>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="flv-Ox-Qc2" secondAttribute="bottom" id="PIU-ku-43V"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oMu-7u-I2c" secondAttribute="trailing" constant="50" id="Qor-YJ-v7O"/>
-                            <constraint firstAttribute="bottom" secondItem="oMu-7u-I2c" secondAttribute="bottom" constant="40" id="Xx9-Er-JH1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VRQ-Uv-NFD" secondAttribute="trailing" constant="40" id="Umc-2k-efT"/>
+                            <constraint firstAttribute="bottom" secondItem="VRQ-Uv-NFD" secondAttribute="bottom" constant="40" id="V6L-ad-pZJ"/>
                             <constraint firstAttribute="trailing" secondItem="flv-Ox-Qc2" secondAttribute="trailing" id="ggv-1b-bwq"/>
                             <constraint firstItem="flv-Ox-Qc2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="n70-90-lgl"/>
                             <constraint firstItem="flv-Ox-Qc2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="qhz-02-U0C"/>
@@ -53,4 +69,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="newPost" width="96" height="96"/>
+    </resources>
 </document>

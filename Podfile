@@ -17,11 +17,14 @@ target 'SocialMediaTask' do
 
   # Firebase
   pod 'Firebase/Database'
+  pod 'Firebase/Storage'
   pod 'Firebase/Auth'
 
-  # Helper
+  # Light-Weight Safe Helper
   pod 'NVActivityIndicatorView'
   pod 'IQKeyboardManagerSwift'
+  pod 'GrowingTextView'
+  pod 'TLPhotoPicker'
   pod 'Toast-Swift'
   
   # Add animation functionalities to UIView through Extensions

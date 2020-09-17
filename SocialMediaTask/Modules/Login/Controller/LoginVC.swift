@@ -30,7 +30,7 @@ class LoginVC: UIViewController
         viewModel = LoginViewModel()
         
         viewModel.loginProcessDone.drive(onNext: { [weak self] (status) in
-            let status = status ?? false
+            guard let status = status else { return }
             status ? self?.segueToPostsScreen() :
                 NotifiyMessage.shared.toast(toastMessage: "Can not login!")
         }).disposed(by: disposeBag)
@@ -48,7 +48,7 @@ extension LoginVC
 {
     private func segueToPostsScreen()
     {
-        let postsVC = PostsVC.instantiate(storyboard: .main)
+        let postsVC = PostsVC.instantiate(storyboard: .posts)
         let navController = UINavigationController(rootViewController: postsVC)
         navController.modalPresentationStyle = .fullScreen
         present(navController, animated: true, completion: nil)

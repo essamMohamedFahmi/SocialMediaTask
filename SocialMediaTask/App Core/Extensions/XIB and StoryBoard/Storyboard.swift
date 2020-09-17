@@ -4,8 +4,9 @@ extension UIStoryboard
 {
     enum StoryboardType: String
     {
-        case main
         case login
+        case posts
+        case addPost
         
         var fileName: String
         {

@@ -8,6 +8,8 @@ public protocol ActivitayActionsDelegate: class
 
 final class Activity: NSObject, ActivitayActionsDelegate
 {
+    // MARK: Properties
+    
     private static let restorationIdentifier: String = "NVActivityIndicator"
     private static var currentView: UIView?
     {
@@ -18,8 +20,19 @@ final class Activity: NSObject, ActivitayActionsDelegate
         }
     }
     
+    private static var enabled = true
+    
+    // MARK: Methods
+    
+    static func stopWorking(_ status: Bool)
+    {
+        enabled = !status
+    }
+    
     static func startAnimating(withBackground: Bool = false)
     {
+        guard enabled else { return }
+        
         Activity.stopAnimating()
         
         DispatchQueue.main.async {

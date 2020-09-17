@@ -10,11 +10,11 @@ import UIKit
 
 class AppFlowManager
 {
-    private var window: UIWindow?
+    private var window = UIWindow(frame: UIScreen.main.bounds)
     
     func start()
     {
-        coordinateToLoginVC()
+        UserSessionManager.shared.isLoggedIn ? coordinateToPostsVC() : coordinateToLoginVC()
     }
 }
 
@@ -22,9 +22,17 @@ extension AppFlowManager
 {
     func coordinateToLoginVC()
     {
-        self.window = UIWindow(frame: UIScreen.main.bounds)
         let loginVC = LoginVC.instantiate(storyboard: .login)
-        self.window?.rootViewController = loginVC
-        self.window?.makeKeyAndVisible()
+        window.rootViewController = loginVC
+        window.makeKeyAndVisible()
+    }
+    
+    func coordinateToPostsVC()
+    {
+        let postsVC = PostsVC.instantiate(storyboard: .posts)
+        let navController = UINavigationController(rootViewController: postsVC)
+        navController.modalPresentationStyle = .fullScreen
+        window.rootViewController = navController
+        window.makeKeyAndVisible()
     }
 }

@@ -10,30 +10,21 @@ import FirebaseAuth
 
 class FirebaseUserSessionManager
 {
-    // MARK: Init
-    
-    private init() { }
-
-    // MARK: Properties
-    
-    static var shared = FirebaseUserSessionManager()
-    private(set) var userID: String?
-    
     // MARK: Methods
     
-    func login(completion: @escaping (Bool) -> Void)
+    func login(completion: @escaping (Result<String, NetworkError>) -> Void)
     {
         let auth = Auth.auth()
-        auth.signInAnonymously { [weak self] (authResult, error) in
+        auth.signInAnonymously { (authResult, error) in
             
-            guard let user = authResult?.user else
+            if let userID = authResult?.user.uid
             {
-                completion(false)
-                return
+                completion(.success(userID))
             }
-            
-            self?.userID = user.uid
-            completion(true)
+            else if let error = error
+            {
+                completion(.failure(NetworkError(error)))
+            }
         }
     }
 }

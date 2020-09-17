@@ -8,6 +8,9 @@ PODS:
   - Firebase/Database (6.30.0):
     - Firebase/CoreOnly
     - FirebaseDatabase (~> 6.5.0)
+  - Firebase/Storage (6.30.0):
+    - Firebase/CoreOnly
+    - FirebaseStorage (~> 3.9.0)
   - FirebaseAuth (6.8.0):
     - FirebaseCore (~> 6.10)
     - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
@@ -25,6 +28,9 @@ PODS:
   - FirebaseDatabase (6.5.0):
     - FirebaseCore (~> 6.10)
     - leveldb-library (~> 1.22)
+  - FirebaseStorage (3.9.0):
+    - FirebaseCore (~> 6.10)
+    - GTMSessionFetcher/Core (~> 1.1)
   - GoogleDataTransport (7.2.0):
     - nanopb (~> 1.30905.0)
   - GoogleUtilities/AppDelegateSwizzler (6.7.2):
@@ -42,6 +48,7 @@ PODS:
   - "GoogleUtilities/NSData+zlib (6.7.2)"
   - GoogleUtilities/Reachability (6.7.2):
     - GoogleUtilities/Logger
+  - GrowingTextView (0.7.2)
   - GTMSessionFetcher/Core (1.4.0)
   - IQKeyboardManagerSwift (6.5.6)
   - Kingfisher (5.15.0):
@@ -70,11 +77,14 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - TLPhotoPicker (2.0.12)
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Database
+  - Firebase/Storage
+  - GrowingTextView
   - IQKeyboardManagerSwift
   - Kingfisher
   - Motion
@@ -82,6 +92,7 @@ DEPENDENCIES:
   - NVActivityIndicatorView
   - RxCocoa
   - RxSwift
+  - TLPhotoPicker
   - Toast-Swift
 
 SPEC REPOS:
@@ -92,8 +103,10 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseCoreDiagnostics
     - FirebaseDatabase
+    - FirebaseStorage
     - GoogleDataTransport
     - GoogleUtilities
+    - GrowingTextView
     - GTMSessionFetcher
     - IQKeyboardManagerSwift
     - Kingfisher
@@ -106,6 +119,7 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
+    - TLPhotoPicker
     - Toast-Swift
 
 SPEC CHECKSUMS:
@@ -115,8 +129,10 @@ SPEC CHECKSUMS:
   FirebaseCore: 9a41e2de78fef10f63cee30ab10e2945266bc1fc
   FirebaseCoreDiagnostics: 7535fe695737f8c5b350584292a70b7f8ff0357b
   FirebaseDatabase: d85b47213273708e48c972012b39105f76229588
+  FirebaseStorage: 33b92875a9b556824886cc7a65120c7d2cb3a8d8
   GoogleDataTransport: 672fb0ce96fe7f7f31d43672fca62ad2c9c86f7b
   GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
+  GrowingTextView: 876bf42005b5e4a4fd740597db12caaf41f0fe6c
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   Kingfisher: 1acb67597a520c2d0310677e66d6e0af455ef757
@@ -129,8 +145,9 @@ SPEC CHECKSUMS:
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  TLPhotoPicker: 36001f4500867fea336c773c6013d6000e512a31
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: ab340dac60b3c206ba79846610a89fd48fd5439d
+PODFILE CHECKSUM: 3af65106fc422d27d4ce5690276a6397a498e634
 
 COCOAPODS: 1.9.3

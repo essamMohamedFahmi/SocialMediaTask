@@ -1,7 +1,5 @@
 import Motion
 
-// MARK:- UIView
-
 extension UIView
 {
     // MARK:- Fade -
@@ -17,9 +15,10 @@ extension UIView
         }
     }
     
-    @objc func fadeOut(duration: Double = 0.8, delay: Double = 0.2, completion: (() -> Void)? = nil)
+    @objc func fadeOut(duration: Double = 0.5, delay: Double = 0.2, completion: (() -> Void)? = nil)
     {
         self.alpha = 1.0
+        self.isHidden = true
         self.animate([.fadeOut,
                      .duration(duration), .delay(delay)])
         {
@@ -43,6 +42,7 @@ extension UIView
     {
         let x = self.superview?.bounds.width
         self.alpha = 0.0
+        self.isHidden = false
         self.transform = CGAffineTransform.identity.translatedBy(x:  -(x ?? 300), y: 0)
         
         self.animate(.translate(),
@@ -74,9 +74,10 @@ extension UIView
         }
     }
     
-    @objc func scaleWithFade(base: CGFloat = 0.0, duration: Double = 1.0, delay: Double = 0.1, completion: (() -> Void)? = nil)
+    @objc func scaleWithFade(base: CGFloat = 0.0, duration: Double = 0.5, delay: Double = 0.1, completion: (() -> Void)? = nil)
     {
         self.alpha = 0.0
+        self.isHidden = false
         self.transform = CGAffineTransform(scaleX: base, y: base)
         
         self.animate([.scale(),
@@ -85,15 +86,5 @@ extension UIView
         {
             completion?()
         }
-    }
-}
-
-// MARK:- UITableViewCell
-
-extension UITableViewCell
-{
-    override func springWithFade(delay: Double = 0.0, stiffness: CGFloat = 0, damping: CGFloat = 15.0, duration: Double = 2.0)
-    {
-        self.contentView.springWithFade(delay: delay, stiffness: stiffness, damping: damping, duration: duration)
     }
 }
